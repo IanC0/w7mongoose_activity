@@ -25,7 +25,6 @@ exports.updateMovie = async(movieObj) => {
              actor: movieObj.newActor, 
              year: movieObj.newYear,
              rating: movieObj.newRating})
-             console.log("Inputted object: " + movieObj.newYear)
     } catch (error) {
         console.log(error)
     }
@@ -42,7 +41,6 @@ exports.deleteMovie = async (movieObj) => {
 
 exports.searchMovie = async (movieObj) => {
     try {
-        console.log("starting search")
         const results = await Movie.find({title: {$regex: movieObj.searchTitle, $options: 'g,i'}})
         console.log(results)
     } catch (error) {
@@ -52,7 +50,6 @@ exports.searchMovie = async (movieObj) => {
 
 exports.filterMovie = async (movieObj) => {
     try {
-        console.log("starting filter")
         const results = await Movie.find({rating: movieObj.rating})
         console.log("results are " + results)
     } catch (error) {

@@ -15,7 +15,6 @@ const app = async (yargsObj) => {
             console.log(`Successfully added ${yargsObj.title}`)
         } else if (yargsObj.list) {
             //list movies from database
-            console.log("listing movies")
             await listMovie()
         } else if (yargsObj.update) {
             //update movies with filterObj and updateObj
