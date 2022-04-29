@@ -12,7 +12,11 @@ const movieSchema = new mongoose.Schema({
     },
     year: {
         type: Number,
-        default: "Not specified:"
+        default: "Not specified"
+    },
+    rating: {
+        type: String,
+        default: "Not specified"
     }    
 });
 
